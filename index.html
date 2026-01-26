@@ -1,45 +1,60 @@
+<!-- 
+  Sor Victor's Portfolio Website
+  A professional portfolio showcasing projects, education, certifications, and skills
+  Built with Bootstrap 5 and custom CSS
+-->
 <!doctype html>
 <html lang="en">
 
 <head>
+  <!-- Character encoding and viewport settings for responsive design -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Portfolio</title>
 
+  <!-- Bootstrap CSS framework for responsive layout -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- Custom styles for the portfolio -->
   <style>
+    /* CSS Variables for theme colors */
     :root {
       --accent: #0d6efd;
       --soft-bg: #f6f8fc;
     }
 
+    /* Main body typography and layout */
     body {
       font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto;
       line-height: 1.75;
       background: #fff;
     }
 
+    /* Header gradient background */
     header {
       background: linear-gradient(135deg, #eef4ff, #ffffff);
     }
 
+    /* Hero section full viewport height */
     .hero {
       min-height: 70vh;
       display: flex;
       align-items: center;
     }
 
+    /* Standard section padding */
     section {
       padding: 4rem 0;
     }
 
+    /* Section titles with underline accent */
     .section-title {
       font-weight: 700;
       margin-bottom: 1.5rem;
       position: relative;
     }
 
+    /* Accent underline for section titles */
     .section-title::after {
       content: '';
       display: block;
@@ -50,12 +65,14 @@
       border-radius: 2px;
     }
 
+    /* Card styling with shadow */
     .card {
       border: none;
       border-radius: 16px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, .06);
     }
 
+    /* Project card hover animation */
     .project-card {
       transition: all .25s ease;
     }
@@ -65,6 +82,7 @@
       box-shadow: 0 20px 40px rgba(13, 110, 253, .15);
     }
 
+    /* Technology badge styling */
     .badge-tech {
       background: #eef4ff;
       color: #0d6efd;
@@ -72,6 +90,7 @@
       margin-right: 6px;
     }
 
+    /* Footer dark theme */
     footer {
       background: #0b1c2d;
       color: #cfd8e3;
@@ -86,6 +105,7 @@
       text-decoration: underline;
     }
 
+    /* Profile image container */
     .img-profile-container {
       width: 250px;
       height: 250px;
@@ -102,6 +122,8 @@
       object-fit: contain;
 
     }
+    
+    /* Status badge for ongoing projects (green) */
     .ongoing {
       color: green;
       border-radius: 5px;
@@ -110,6 +132,8 @@
       text-align: center;
    
     }
+    
+    /* Status badge for finished projects (red) */
     .end{
       color: red;
       background-color: #fff;
@@ -123,13 +147,16 @@
 
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80">
 
-  <!-- NAVBAR -->
+  <!-- NAVIGATION BAR -->
+  <!-- Sticky navbar with smooth scrolling navigation -->
   <nav id="mainNav" class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
     <div class="container">
       <a class="navbar-brand fw-semibold" href="#">MyPortfolio</a>
+      <!-- Mobile menu toggle button -->
       <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <!-- Navigation menu -->
       <div id="navMenu" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
@@ -144,17 +171,21 @@
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
+  <!-- Main introductory banner with profile image and call-to-action buttons -->
   <header class="hero">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-7">
+          <!-- Profile photo container -->
           <div class="my-4 img-profile-container">
             <img src="profile.png" alt="Sor Victor" class="mb-4 rounded img-profile">
           </div>
+          <!-- Main introduction -->
           <h1 class="display-6 fw-bold">
             Hi — I'm <span class="text-primary">Sor Victor</span>
           </h1>
+          <!-- Tagline and CTA buttons -->
           <p class="mb-4">
             I am available for internships and collaborative projects.
             My goal is to improve my skills and contribute to real-world applications.
@@ -168,10 +199,12 @@
 
   <main>
 
-    <!-- ABOUT -->
+    <!-- ABOUT SECTION -->
+    <!-- Personal bio, skills, interests, and quick facts -->
     <section id="about">
       <div class="container">
         <div class="row my-3 gy-4 align-items-center">
+          <!-- Main about content -->
           <div class="col-lg-8">
             <h2 class="section-title">Describe myself</h2>
             <p>
@@ -179,37 +212,42 @@
               software development and machine learning. My key strengths include problem-solving,
               attention to detail, and a strong willingness to learn.
             </p>
+            <!-- Skills and interests list -->
             <ul class="list-unstyled">
-              <li><strong>Skills:</strong> Flutter, Dart, Laravel, Python, ML basics, Git, MySQL</li>
-              <li><strong>Interests:</strong> Mobile apps, AI-powered tools, Cloud computing</li>
+              <li><strong>Skills:</strong> Flutter, Dart, Laravel, Python ,AWS , ML basics, Git, MySQL, Java</li>
+              <li><strong>Interests:</strong> Mobile apps development,Web development,Deep learning, AI-powered tools, Cloud computing</li>
               <li><strong>Language:</strong> English, Chinese, Bahasa Melayu</li>
             </ul>
           </div>
 
+          <!-- Quick facts sidebar -->
           <div class="col-lg-4">
             <div class="card p-4">
               <h5 class="fw-bold">Quick facts</h5>
               <p class="mb-1"><strong>Age:</strong> 23</p>
               <p class="mb-1"><strong>Country:</strong> Malaysia</p>
               <p class="mb-1"><strong>Student:</strong> UMPSA</p>
-              <p class="mb-0"><strong>Looking for:</strong> Internship</p>
+              <p class="mb-0"><strong>Looking for:</strong> Internship in software engineering or data science</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- EDUCATION -->
+    <!-- EDUCATION SECTION -->
+    <!-- Display education history and academic background -->
     <section id="education" style="background:var(--soft-bg);">
       <div class="container">
         <h3 class="section-title">Education</h3>
         <div class="row g-4 mt-3">
+          <!-- University degree -->
           <div class="col-md-6">
             <div class="card p-4 h-100">
               <h5>Bachelor of Computer Science (Software Engineering)</h5>
               <p class="text-muted mb-0">Universiti Malaysia Pahang (UMP)</p>
             </div>
           </div>
+          <!-- High school education -->
           <div class="col-md-6">
             <div class="card p-4 h-100">
               <h5>High School</h5>
@@ -222,11 +260,13 @@
       </div>
     </section>
 
-    <!-- CERTIFICATION -->
+    <!-- CERTIFICATION SECTION -->
+    <!-- Professional certifications and online courses completed -->
     <section id="certification">
       <div class="container">
         <h3 class="section-title">Certification</h3>
         <div class="row g-4 mt-3">
+          <!-- AWS Cloud Practitioner -->
           <div class="col-md-4">
             <div class="card p-4 h-100">
               <h5>AWS Certified Cloud Practitioner</h5>
@@ -238,6 +278,7 @@
               </a>
             </div>
           </div>
+          <!-- Troubleshooting and Debugging -->
           <div class="col-md-4">
             <div class="card p-4 h-100">
               <h5>Troubleshooting and Debugging Techniques</h5>
@@ -248,6 +289,7 @@
               </a>
             </div>
           </div>
+          <!-- Python for Operating System -->
           <div class="col-md-4">
             <div class="card p-4 h-100">
               <h5>Using Python to Interact with the Operating System</h5>
@@ -264,21 +306,22 @@
       </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- PROJECTS SECTION -->
+    <!-- Showcase of completed and ongoing projects with descriptions and links -->
     <section id="projects" style="background:var(--soft-bg);">
       <div class="container">
         <h3 class="section-title">Projects</h3>
         <div class="row g-4 mt-2">
 
+          <!-- PROJECT 1: Smart Farming -->
           <div class="col-md-6 col-lg-6">
             <div class="card project-card p-4 h-100">
-               <iframe
-src="https://www.youtube.com/watch?v=_xCVvUVPV7c" title="YouTube video player" frameborder="0">
-</iframe>
+              
               <div class="row mb-3">
                 <div class="col-md-8">
                   <h5>Smart Farming</h5>
                 </div>
+                <!-- Status badge showing project is ongoing -->
                 <div class="col-md-4 ongoing">
                   Ongoing
                 </div>
@@ -287,6 +330,7 @@ src="https://www.youtube.com/watch?v=_xCVvUVPV7c" title="YouTube video player" f
               <p>
                 Mobile app for dragon fruit disease detection using AI-based image analysis and with commnunity support
               </p>
+              <!-- Technologies used -->
               <div class="mb-2">
                 <strong>Tech:</strong><br>
                 <span class="badge badge-tech">Flutter</span>
@@ -295,6 +339,7 @@ src="https://www.youtube.com/watch?v=_xCVvUVPV7c" title="YouTube video player" f
                 <span class="badge badge-tech">AWS Simple Storage Service (S3)</span>
                 <span class="badge badge-tech">Render</span>
               </div>
+              <!-- Project links -->
               <div class="row my-5">
                 <a class="col-lg-6 mt-2 mt-lg-0`" target="_blank" rel="noopener noreferrer"
                   href="https://github.com/john90921/Smart-Farming-frontend">
@@ -308,13 +353,16 @@ src="https://www.youtube.com/watch?v=_xCVvUVPV7c" title="YouTube video player" f
 
             </div>
           </div>
-  <div class="col-md-6 col-lg-6">
+
+          <!-- PROJECT 2: Fruit Ecommerce System -->
+          <div class="col-md-6 col-lg-6">
             <div class="card project-card p-4 h-100">
               
                <div class="row mb-3">
                 <div class="col-md-8">
                   <h5>Fruit Ecommerce system</h5>
                 </div>
+                <!-- Status badge showing project is ongoing -->
                 <div class="col-md-4 ongoing">
                   Ongoing
                 </div>
@@ -322,6 +370,7 @@ src="https://www.youtube.com/watch?v=_xCVvUVPV7c" title="YouTube video player" f
               <p>
              Create a complete online shopping platform with product catalogs, package-based pricing, and order management capabilities.
               </p>
+              <!-- Technologies used -->
               <div class="mb-2">
                 <strong>Tech:</strong><br>
                 <span class="badge badge-tech">Laravel</span>
@@ -330,6 +379,7 @@ src="https://www.youtube.com/watch?v=_xCVvUVPV7c" title="YouTube video player" f
                 <span class="badge badge-tech">Bootstrap</span>
                 <span class="badge badge-tech">Stripe integration</span>
               </div>
+              <!-- Project links -->
               <div class="row my-5">
                 <a class="col-lg-6" target="_blank" rel="noopener noreferrer"
                   href="https://github.com/john90921/myfresh">
@@ -338,6 +388,8 @@ src="https://www.youtube.com/watch?v=_xCVvUVPV7c" title="YouTube video player" f
               </div>
             </div>
           </div>
+
+          <!-- PROJECT 3: Early Diabetes Detection System -->
           <div class="col-md-6 col-lg-6">
             <div class="card project-card p-4 h-100">
             
@@ -345,6 +397,7 @@ src="https://www.youtube.com/watch?v=_xCVvUVPV7c" title="YouTube video player" f
                 <div class="col-md-8">
             <h5>Early Diabetes Detection System</h5>
                 </div>
+                <!-- Status badge showing project is finished -->
                 <div class="col-md-4 end">
                   Finished
                 </div>
@@ -355,11 +408,13 @@ Logistic Regression and Random Forest Classifier—were
 developed and evaluated for the purpose of predicting
 diabetes using a large clinical dataset
               </p>
+              <!-- Technologies used -->
               <div class="mb-2">
                 <strong>Tech:</strong><br>
                 <span class="badge badge-tech">Python</span>
                 <span class="badge badge-tech">Flask</span>
               </div>
+               <!-- Project links -->
                <div class="row my-5">
                 <a class="col-lg-6" target="_blank" rel="noopener noreferrer"
                   href="https://github.com/john90921/MlA-deployment">
@@ -369,6 +424,7 @@ diabetes using a large clinical dataset
             </div>
           </div>
 
+          <!-- PROJECT 4: Printing Services Management System -->
           <div class="col-md-6 col-lg-6">
             <div class="card project-card p-4 h-100">
               
@@ -376,6 +432,7 @@ diabetes using a large clinical dataset
                 <div class="col-md-8">
                   <h5>Printing Services Management system</h5>
                 </div>
+                <!-- Status badge showing project is finished -->
                 <div class="col-md-4 end">
                   Finished
                 </div>
@@ -383,6 +440,7 @@ diabetes using a large clinical dataset
               <p>
                 Centralize and automate printing services management.
               </p>
+              <!-- Technologies used -->
               <div class="mb-2">
                 <strong>Tech:</strong><br>
                 <span class="badge badge-tech">PHP</span>
@@ -390,6 +448,7 @@ diabetes using a large clinical dataset
                 <span class="badge badge-tech">Bootstrap</span>
                 <span class="badge badge-tech">Stripe integration</span>
               </div>
+              <!-- Project links -->
               <div class="row my-5">
                 <a class="col-lg-6" target="_blank" rel="noopener noreferrer"
                   href="https://github.com/MinnnErrr/web-engineering-mini-project">
@@ -398,6 +457,8 @@ diabetes using a large clinical dataset
               </div>
             </div>
           </div>
+
+          <!-- PROJECT 5: Car and Bus Booking System -->
            <div class="col-md-6 col-lg-6">
             <div class="card project-card p-4 h-100">
               
@@ -405,6 +466,7 @@ diabetes using a large clinical dataset
                 <div class="col-md-8">
                   <h5>Car and Bus booking system for umpsa students and staff</h5>
                 </div>
+                <!-- Status badge showing project is finished -->
                 <div class="col-md-4 end">
                   Finished
                 </div>
@@ -420,11 +482,12 @@ diabetes using a large clinical dataset
                 The interface is design for multiple device including mobile phone and desktop.
               </p>
 
-
+              <!-- Technologies used -->
               <div class="mb-2">
                 <strong>Tech:</strong><br>
                 <span class="badge badge-tech">Figma</span>
               </div>
+              <!-- Project links -->
               <div class="row my-5">
                 <a class="col-lg-6" target="_blank" rel="noopener noreferrer"
                   href="https://www.figma.com/proto/Lldx4rTBRGYN98y6pxFiFi/Figma-Comp?node-id=677-28490&t=llW66oLnMjyOdfEH-1&scaling=contain&content-scaling=fixed&page-id=677%3A7667&starting-point-node-id=677%3A28490&show-proto-sidebar=1">
@@ -440,13 +503,16 @@ diabetes using a large clinical dataset
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER SECTION -->
+  <!-- Contact information and copyright notice -->
   <footer id="contact" class="py-5">
     <div
       class="container d-flex flex-column flex-md-row justify-content-between align-items-center text-center text-md-start">
+      <!-- Copyright year (dynamically updated via JavaScript) -->
       <p class="mb-2 mb-md-0">
         © <span id="year"></span> Sor Victor. All rights reserved.
       </p>
+      <!-- Contact links -->
       <div>
         <a class="me-3" href="#">Email: sorvictor90@gmail.com</a>
         <a href="https://www.linkedin.com/in/sor-victor-02b48226a/">LinkedIn</a>
@@ -454,10 +520,13 @@ diabetes using a large clinical dataset
     </div>
   </footer>
 
+  <!-- SCRIPTS -->
+  <!-- Update footer year to current year -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
+  <!-- Bootstrap JavaScript bundle for interactive components -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
